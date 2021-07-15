@@ -1,0 +1,17 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width:60vw
+}
+
+.profile-content-row td:first-child {
+  width: 100px;
+}
