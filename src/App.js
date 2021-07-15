@@ -13,12 +13,6 @@ import { SourceContext } from './context/sourceContext';
 
 const App = () => {
   const earthquakeData = sourceData.data.features.filter(feat => feat.properties.type === 'earthquake');
-  const earthquakesById = earthquakeData.reduce((acc, curr) => {
-    if (!acc[curr.id]) {
-      acc[curr.id] = curr
-    }
-    return acc
-  }, {})
 
   return (
     <>
@@ -28,17 +22,17 @@ const App = () => {
         </SourceContext.Provider>
 
         <Switch>
-          <SourceContext.Provider value={{ earthquakeData, profileData: sourceData.profile }}>
+          <SourceContext.Provider value={{ earthquakeData, profileData: sourceData.profile, metadata: sourceData.data.metadata }}>
             <Route exact path="/">
-              <Home sourceData={sourceData} />
+              <Home />
             </Route>
 
             <Route path="/profile">
-              <Profile profileData={sourceData.profile} />
+              <Profile />
             </Route>
 
             <Route path="/detail/:id">
-              <EarthquakeDetail sourceData={sourceData} />
+              <EarthquakeDetail />
             </Route>
 
           </SourceContext.Provider>
