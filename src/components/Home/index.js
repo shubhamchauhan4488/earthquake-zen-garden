@@ -3,7 +3,8 @@ import './home.css';
 import Earthquake from '../Earthquake';
 import classnames from 'classnames';
 import { SourceContext } from '../../context/sourceContext';
-import { ascComparator, descComparator } from './../../utilities/sorting-helpers'
+import { ascComparator, descComparator } from './../../utilities/sorting-helpers';
+
 const Home = () => {
 
   const { earthquakeData, metadata } = useContext(SourceContext);
