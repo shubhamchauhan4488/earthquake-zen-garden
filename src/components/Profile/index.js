@@ -12,26 +12,28 @@ const Profile = () => {
       <div className='profile-content-wrapper'>
         <img src={avatarImage} width='80px' height='100px' />
         <table >
-          <tr className='profile-content-row'>
-            <td><b>First name</b></td>
-            <td>{firstName}</td>
-          </tr>
-          <tr className='profile-content-row'>
-            <td><b>Last name</b></td>
-            <td>{lastName}</td>
-          </tr>
-          <tr className='profile-content-row'>
-            <td><b>Phone</b></td>
-            <td>{phone}</td>
-          </tr>
-          <tr className='profile-content-row'>
-            <td><b>Email</b></td>
-            <td>{email}</td>
-          </tr>
-          <tr className='profile-content-row'>
-            <td><b>Bio</b></td>
-            <td>{bio}</td>
-          </tr>
+          <tbody>
+            <tr className='profile-content-row'>
+              <td><b>First name</b></td>
+              <td>{firstName}</td>
+            </tr>
+            <tr className='profile-content-row'>
+              <td><b>Last name</b></td>
+              <td>{lastName}</td>
+            </tr>
+            <tr className='profile-content-row'>
+              <td><b>Phone</b></td>
+              <td>{phone}</td>
+            </tr>
+            <tr className='profile-content-row'>
+              <td><b>Email</b></td>
+              <td>{email}</td>
+            </tr>
+            <tr className='profile-content-row'>
+              <td><b>Bio</b></td>
+              <td>{bio}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
