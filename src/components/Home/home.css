@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+th.sortable {
+  position: relative;
+  cursor: pointer;
+}
+
+th.sortable::after {
+  content: "\f0dc";
+  font-family: FontAwesome;
+  right: 8px;
+  color: #999;
+}
+
+th.sortable.asc::after {
+
+  content: "\f0d8";
+}
+
+th.sortable.desc::after {
+ 
+  content: "\f0d7";
+}
